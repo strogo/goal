@@ -4,7 +4,8 @@ title: High productivity web development in Go language - Sunplate Toolkit
 ---
 ## Overview
 ### The idea
-Sunplate is a set of independent utilities. 
+A minimalistic, 100% customizable solution in a form of independent utilities.
+The list of currently supported ones includes:
 
 * `sunplate create` - create a skeleton application.
 * `sunplate run` - start a file watcher and task runner.
@@ -14,17 +15,19 @@ Sunplate is a set of independent utilities.
 > Command `sunplate generate handlers`
 > generates a `handlers` package from your controllers.
 > The generated package will contain Go handler functions
-> that can be used as `handlers.ControllerName.ActionName`.
+> that can be accessed as `handlers.ControllerName.ActionName`.
 >
 > Read below about how your controllers should look like.
 
-Controller is any structure that has [actions](#actions). Example:
+Controller is any structure that has [actions](#actions).
 
 ```go
 // Profiles is a sample controller.
 type Profiles struct {
 	*Controller
 }
+
+...
 ```
 
 An inheritance of controllers is possible. Just as illustrated above `Profiles`
@@ -43,10 +46,9 @@ func (c *Profiles) Index() action.Result {
 }
 ```
 
-Actions are allowed to return any number of arguments. The only requirement is the first
-one must be `action.Result`.
+Actions are allowed to return any number of arguments.
 Moreover, they may get any number of builtin type arguments. They will be extracted
-from a URL and/or `request.Form`.
+from a URL and/or `request.Form` to converted to appropriate types using `strconv` package.
 
 ```go
 // History is a sample of action that gets two arguments
