@@ -161,8 +161,8 @@ when trying to access `Index`:
 
 > Command `sunplate run` starts a file watcher / task runner that
 > reads `sunplate.yml` file at the root of your project
-> and uses it to (re)build / (re)start your project and
-> necessary dependencies and CSS/CoffeeScript/Etc. assets.
+> and uses it to (re)build / (re)start your project,
+> necessary dependencies, and CSS/CoffeeScript/Etc. assets.
 >
 > The format of `sunplate.yml` configuration file is described
 > below.

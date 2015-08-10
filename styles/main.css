@@ -5,3 +5,10 @@ blockquote {
 	background-color: #CCFF99;
 	color: #333333;
 }
+#forkme {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+	z-index:40000;
+}
