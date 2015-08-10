@@ -10,6 +10,7 @@ Sunplate is a set of independent utilities.
 * `sunplate run` - start a file watcher and task runner.
 * `sunplate generate` - automatic generation of Go code (used together with `go generate`).
 
+### Controllers
 > Command `sunplate generate handlers`
 > generates a `handlers` package from your controllers.
 > The generated package will contain Go handler functions
@@ -17,7 +18,6 @@ Sunplate is a set of independent utilities.
 >
 > Read below about how your controllers should look like.
 
-### Controllers
 Controller is any structure that has [actions](#actions). Example:
 
 ```go
@@ -152,11 +152,12 @@ func (c *ChildController) Index() action.Result {
 So, as a result methods will be called in the following order
 when trying to access `Index`:
 
-1. `Before` of `ParentController`
-2. `Before` of `ChildController` (if 1 returned `nil`)
-3. `Index` of `ChildController` (if 2 returned `nil`)
-4. `Finally` of `ParentController`
+1. `ParentController.Before`
+2. `ChildController.Before` (if 1 returned `nil`)
+3. `ChildController.Index` (if 1 and 2 returned `nil`)
+4. `ParentController.Finally`
 
+### Task runner / file watcher
 
 > Command `sunplate run` starts a file watcher / task runner that
 > reads `sunplate.yml` file at the root of your project
@@ -187,7 +188,7 @@ watch:
 	path/to/another/dir*: # Asterisk at the end means scan recursively.
 		- go build smth
 
-# A sample section with a list of command.
+# A sample section with a list of commands.
 list_of_commands:
 	- command_one
 	- command_two
