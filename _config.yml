@@ -1,0 +1,11 @@
+safe: true
+lsi: false
+markdown: redcarpet
+highligher: pygments
+redcarpet:
+  extensions:
+    - fenced_code_blocks
+    - no_intra_emphasis
+    - autolink
+    - tables
+    - strikethrough
