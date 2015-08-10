@@ -5,7 +5,10 @@ highligher: pygments
 redcarpet:
   extensions:
     - fenced_code_blocks
-    - no_intra_emphasis
     - autolink
     - tables
     - strikethrough
+    - with_toc_data
+    - emphasis
+    - double_emphasis
+    - quote
