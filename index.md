@@ -58,12 +58,12 @@ func (c *Profiles) History(username string, page int) (action.Result, error) {
 
 ### Magic actions
 There are two actions with special meaning. They are
-[`Before`](#before-magic-action) and [`After`](#after-magic-action).
+[`Before`](#magic-before-action) and [`After`](#magic-after-action).
 If presented, they will be automatically executed with every request.
 
-#### Before magic action
+#### Magic Before action
 Before action will be started before an [action](#action). If `Before` returns a non-nil result,
-[action](#action) or [`After` magic action](#after-magic-action) will not be started.
+[action](#action) or [magic After action](#magic-after-action) will not be started.
 
 ```go
 // Before is a magic method that is automatically started before
@@ -78,8 +78,8 @@ func (c *Profiles) Before() action.Result {
 }
 ```
 
-#### After magic action
-After is equivalent to [Before magic action](#before-magic-action) except
+#### Magic After action
+After is equivalent to [magic Before action](#magic-before-action) except
 it is started after an [action](#action).
 And if action returns a non nil result, After action will not be started.
 
@@ -87,10 +87,10 @@ And if action returns a non nil result, After action will not be started.
 ### Magic methods
 Besides magic actions there are also two magic methods.
 
-#### Initially magic method
-Initially is started before any [action](#action) with every request. It gets two arguments:
+#### Magic Initially method
+`Initially` is started before any [action](#action) with every request. It gets two arguments:
 `http.ResponseWriter` and `*http.Request`. And returns a single result: `finish bool`.
-If `finish` is `true` that means no other Initially magic methods or actions
+If `finish` is `true` that means no other magic `Initially` methods or actions
 shall be started.
 
 ```go
@@ -100,19 +100,98 @@ func (c *Profiles) Initially(w http.ResponseWriter, *r.Request) (finish bool) {
 }
 ```
 
-#### Finally magic method
-Finally is equivalent of [Initially](#initially-magic-action) except it is started at the very end.
+#### Magic Finally method
+`Finally` is equivalent of [Initially](#magic-initially-method) except it is started at the very end.
 And it will be executed even if some of the actions or previous magic methods
-panic. If Finally returns `true` that means no other magic Finally methods are
+panic. If `Finally` returns `true` that means no other magic `Finally` methods are
 expected to be started.
 
 ```go
 // Finally is a sample magic method that catches panics.
-func (c *Profiles) Initially(w http.ResponseWriter, *r.Request) bool {
+func (c *Profiles) Finally(w http.ResponseWriter, *r.Request) bool {
 	if err := recover(); err != nil {
 		...
 		return true
 	}
 	return false
 }
+```
+
+### Inheritance
+There is a parent controller with magic actions / methods:
+
+```go
+type ParentController struct {
+}
+
+func (c *ParentController) Before() action.Result {
+	return nil
+}
+
+func (c *ParentController) Finally(http.ResponseWriter, *http.Request) bool {
+	return false
+}
+```
+
+and our child controller that embeds the parent has some magic actions, too:
+
+```go
+type ChildController struct {
+	*ParentController
+}
+
+func (c *ChildController) Before() action.Result {
+	return nil
+}
+
+func (c *ChildController) Index() action.Result {
+	return nil
+}
+```
+
+So, as a result methods will be called in the following order
+when trying to access `Index`:
+
+1. `Before` of `ParentController`
+2. `Before` of `ChildController` (if 1 returned `nil`)
+3. `Index` of `ChildController` (if 2 returned `nil`)
+4. `Finally` of `ParentController`
+
+
+> Command `sunplate run` starts a file watcher / task runner that
+> reads `sunplate.yml` file at the root of your project
+> and uses it to (re)build / (re)start your project and
+> necessary dependencies and CSS/CoffeeScript/Etc. assets.
+>
+> The format of `sunplate.yml` configuration file is described
+> below.
+
+```yaml
+# Commands that are expected to be started at the beginning.
+# You may use it to install / update some third party build components.
+init:
+	- npm install coffeescript
+
+	# Builtin commands that may be used inside "init" or "watch" section.
+	- /pass                    # Do nothing
+	- /echo   "Hello, world"   # Print something
+	- /start  list_of_commands # Start commands asynchronously.
+	- /run    list_of_commands # Run commands and wait them to complete.
+	- /single single_command   # Start a single instance of a command, make sure the previous one is killed.
+
+# Watch the directories and execute the command every time
+# some file has been modified there.
+watch:
+	path/to/dir:
+		- coffeescript smth
+	path/to/another/dir*: # Asterisk at the end means scan recursively.
+		- go build smth
+
+# A sample section with a list of command.
+list_of_commands:
+	- command_one
+	- command_two
+
+# A sample section with just one command.
+single_command: some_command
 ```
