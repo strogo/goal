@@ -21,7 +21,7 @@
 							{% if item.pages %}
 								<div class="item"><div class="menu">
 									{% for sub in item.pages %}
-									<a class="{% if page.url == sub.url %}active {% endif %}item" href="{{ sub.url }}">
+									<a class="{% if page.url == sub.url %}active {% endif %}item" href="{{ site.baseurl }}{{ sub.url }}">
 										<i class="{% if sub.icon %}{{ sub.icon }}{% else %}asterisk{% endif %} icon"></i>
 											{{ sub.name }}
 										</a>
