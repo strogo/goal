@@ -12,37 +12,24 @@
 		<div class="ui relaxed grid container">
 			<div class="five wide column">
 				<nav class="ui inverted fluid pointing vertical menu">
-					<div class="item">
-						<a class="header" href="#">
-							<i class="text file icon"></i>
-							Tutorial
-						</a>
-					</div>
-					<div class="active item">
-						<a class="active header" href="#">
-							<i class="cube icon"></i>
-							sunplate create
-						</a>
-						<div class="item">
-							<div class="menu">
-								<a class="item">Subsection 1</a>
-								<a class="active item">Subsection 1</a>
-								<a class="item">Subsection 1</a>
-							</div>
+					{% for item in site.manual %}
+					<div class="{% if page.url == item.url or (page.category == item.category and page.category) %}active {% endif %}item">
+							<a class="header" href="{{ site.baseurl }}{{ item.url }}">
+								<i class="{{ item.icon }} icon"></i>
+								{{ item.name }}
+							</a>
+							{% if item.pages %}
+								<div class="item"><div class="menu">
+									{% for sub in item.pages %}
+									<a class="{% if page.url == sub.url %}active {% endif %}item" href="{{ sub.url }}">
+										<i class="{% if sub.icon %}{{ sub.icon }}{% else %}asterisk{% endif %} icon"></i>
+											{{ sub.name }}
+										</a>
+									{% endfor %}
+								</div></div>
+							{% endif %}
 						</div>
-					</div>
-					<div class="item">
-						<a class="header" href="#">
-							<i class="cube icon"></i>
-							sunplate run
-						</a>
-					</div>
-					<div class="item">
-						<a class="header" href="#">
-							<i class="cube icon"></i>
-							sunplate generate handlers
-						</a>
-					</div>
+					{% endfor %}
 				</nav>
 			</div>
 			<div class="eleven wide column">

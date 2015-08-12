@@ -8,7 +8,7 @@ menu:
     icon: sun
   manual:
     name: Manual
-    url: manual/
+    url: /manual/index.html
     icon: book
   tracker:
     name: Issue Tracker
@@ -18,34 +18,34 @@ menu:
 manual:
   -
     name: Introduction
-    url: manual/index.html
+    url: /manual/index.html
     icon: file text
     category: manual
   -
     name: sunplate create
-    url: manual/create/index.html
+    url: /manual/create/index.html
     icon: cube
     category: create
   -
     name: sunplate run
-    url: manual/run/index.html
+    url: /manual/run/index.html
     icon: cube
     category: run
   -
     name: sunplate generate handlers
-    url: manual/handlers/index.html
+    url: /manual/handlers/index.html
     icon: cube
     category: handlers
     pages:
       -
         name: Controllers
-        url: manual/handlers/controllers.html
+        url: /manual/handlers/controllers.html
       -
         name: Actions
-        url: manual/handlers/actions.html
+        url: /manual/handlers/actions.html
   -
     name: Deployment
-    url: manual/deployment.html
+    url: /manual/deployment.html
     icon: file text
 
 safe: true

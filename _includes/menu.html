@@ -1,9 +1,9 @@
 <nav class="ui bottom attached stackable orange three item inverted menu" id="menu">
-	<a class="{% if page.layout == "about" %}active {% endif %}item" href="{{ site.baseurl }}/{{ site.menu.about.url }}">
+	<a class="{% if page.layout == "about" %}active {% endif %}item" href="{{ site.baseurl }}{{ site.menu.about.url }}">
 		<i class="{{ site.menu.about.icon }} icon"></i>
 		{{ site.menu.about.name }}
 	</a>
-	<a class="{% if page.layout == "manual" %}active {% endif %}item" href="{{ site.baseurl }}/{{ site.menu.manual.url }}">
+	<a class="{% if page.layout == "manual" %}active {% endif %}item" href="{{ site.baseurl }}{{ site.menu.manual.url }}">
 		<i class="{{ site.menu.manual.icon }} icon"></i>
 		{{ site.menu.manual.name }}
 	</a>
