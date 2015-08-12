@@ -5,9 +5,6 @@
 	border: 0;
 	z-index: 40000;
 }
-.masthead.segment {
-	min-height: 22em;
-}
 h1 {
 	font-size: 1.8em !important;
 }
@@ -26,12 +23,21 @@ h5 {
 h6 {
 	font-size: 0.8em !important;
 }
-.masthead h1.ui.header {
+.masthead.segment {
+	min-height: 9.7em;
+}
+.masthead.segment h1.ui.header {
+	margin-top: 1em;
+}
+#about_layout.masthead.segment {
+	min-height: 22em;
+}
+#about_layout.masthead h1.ui.header {
 	margin-top: 1.2em;
 	font-size: 3.2em !important;
 	font-weight: normal;
 }
-.masthead h2 {
+#about_layout.masthead h2 {
 	font-size: 1.4em !important;
 	font-weight: normal;
 }
