@@ -4,7 +4,7 @@ baseurl: https://anonx.github.io/sunplate
 menu:
   about:
     name: About
-    url:
+    url: /
     icon: sun
   manual:
     name: Manual
