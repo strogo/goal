@@ -8,12 +8,33 @@
 .masthead.segment {
 	min-height: 22em;
 }
+h1 {
+	font-size: 1.8em !important;
+}
+h2 {
+	font-size: 1.6em !important;
+}
+h3 {
+	font-size: 1.4em !important;
+}
+h4 {
+	font-size: 1.2em !important;
+}
+h5 {
+	font-size: 1em !important;
+}
+h6 {
+	font-size: 0.8em !important;
+}
 .masthead h1.ui.header {
 	margin-top: 1.2em;
-	font-size: 3.2em;
+	font-size: 3.2em !important;
 	font-weight: normal;
 }
 .masthead h2 {
-	font-size: 1.4em;
+	font-size: 1.4em !important;
 	font-weight: normal;
+}
+#menu {
+	margin-bottom: 2em;
 }

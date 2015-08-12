@@ -14,8 +14,8 @@
 			{% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
 		</header>
 
-		<nav class="ui bottom attached stackable orange three item inverted menu">
-			<a class="active item" href="{{ site.url }}">
+		<nav class="ui bottom attached stackable orange three item inverted menu" id="menu">
+			<a class="{% if page.active == "about" %}active {% endif %}item" href="{{ site.url }}">
 				<i class="cubes icon"></i>
 				About
 			</a>
@@ -23,12 +23,11 @@
 				<i class="book icon"></i>
 				Tutorial
 			</a>
-			<a class="item">
+			<a class="item" href="https://github.com/anonx/sunplate/issues">
 				<i class="bug icon"></i>
 				Issue Tracker
 			</a>
 		</nav>
-
 
 		<div class="ui relaxed grid container">
 			<article class="sixteen wide column">

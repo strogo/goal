@@ -1,32 +1,88 @@
 ---
 layout: about
 title: High productivity web-development in Go language
+active: about
 ---
 
-<h1>Features</h1>
+<div class="ui stackable two column grid">
 
-<div class="ui doubling four cards">
-	<div class="orange card">
-		<div class="center aligned content">
-			<div class="header">High performance</div>
+	<div class="ten wide column">
+		<h1>
+			Meet Sunplate
+			<small class="ui text container">Free and Open-Source Toolkit</small>
+		</h1>
+		<div class="ui two doubling cards">
+			<div class="card">
+				<div class="center aligned content">
+					<span class="ui orange header">
+						<i class="line chart icon"></i>
+						High Productivity
+					</span>
+					<p>
+						Sunplate is a set of utilities that let you develop apps in Go blazingly fast.
+						Focus on things that matter, we'll take care of the rest.
+					</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="center aligned content">
+					<span class="ui orange header">
+						<i class="dashboard icon"></i>
+						High Performance
+					</span>
+					<p>
+						Code generation and good default components
+						(such as <a href="https://github.com/naoina/denco">denco router</a> based on double-array)
+						let you build apps that are very fast.
+					</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="center aligned content">
+					<span class="ui orange header">
+						<i class="flag icon"></i>
+						Type Safety
+					</span>
+					<p>
+						Catch errors when you are compiling your app not during runtime.
+						The way Sunplate works will help you identify problems
+						in code early.
+					</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="center aligned content">
+					<span class="ui orange header">
+						<i class="settings icon"></i>
+						100% Customizability
+					</span>
+					<p>
+						It is possible to customize every single thing.
+						Wanna bring your own router, template system, or any other component?
+						That's easy.
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
 
-	<div class="orange card">
-		<div class="center aligned content">
-			<div class="header">File watcher & task runner</div>
-		</div>
-	</div>
+	<section class="six wide column">
+		<h1 class="ui header">
+			Getting started
+		</h1>
+{% highlight bash %}
+# Step 1: Install sunplate toolkit.
+go get -u github.com/anonx/sunplate
 
-	<div class="orange card">
-		<div class="center aligned content">
-			<div class="header">Type safety</div>
-		</div>
-	</div>
+# Step 2: Create a new skeleton application.
+sunplate new github.com/$username/$project
 
-	<div class="orange card">
-		<div class="center aligned content">
-			<div class="header">100% customizability</div>
-		</div>
-	</div>
+# Step 3: Start a watcher / task runner.
+sunplate run github.com/$username/$project
+
+# Step 4: Start making changes to the app
+# generated at Step 1.
+{% endhighlight %}
+	</section>
+
 </div>
