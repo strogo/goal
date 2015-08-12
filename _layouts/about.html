@@ -5,42 +5,12 @@
 	</head>
 
 	<body>
-		<header class="ui inverted vertical masthead center aligned segment">
-			<div class="ui text container">
-				<h1 class="ui header">
-					<a href="/index.html" class="ui orange header">{{ site.title }}</a>
-				</h1>
-			</div>
-			{% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
-		</header>
+		{% include header.html %}
 
-		<nav class="ui bottom attached stackable orange three item inverted menu" id="menu">
-			<a class="{% if page.active == "about" %}active {% endif %}item" href="{{ site.url }}">
-				<i class="cubes icon"></i>
-				About
-			</a>
-			<a class="item">
-				<i class="book icon"></i>
-				Tutorial
-			</a>
-			<a class="item" href="https://github.com/anonx/sunplate/issues">
-				<i class="bug icon"></i>
-				Issue Tracker
-			</a>
-		</nav>
+		{% include menu.html %}
 
-		<div class="ui relaxed grid container">
-			<article class="sixteen wide column">
-				{{ content }}
-			</article>
+		{% include content.html %}
 
-			<footer class="sixteen wide column">
-				BSD 2-clause "Simplified" License
-			</footer>
-		</div>
-
-		<a href="https://github.com/anonx/sunplate">
-			<img src="static/images/forkme_right_orange.png" id="forkme" alt="Fork me on GitHub">
-		</a>
+		{% include forkme.html %}
 	</body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include head.html %}
+	</head>
+
+	<body>
+		{% include header.html %}
+
+		{% include menu.html %}
+
+		<div class="ui relaxed grid container">
+			<div class="five wide column">
+				<nav class="ui inverted fluid pointing vertical menu">
+					<div class="item">
+						<a class="header" href="#">
+							<i class="text file icon"></i>
+							Tutorial
+						</a>
+					</div>
+					<div class="active item">
+						<a class="active header" href="#">
+							<i class="cube icon"></i>
+							sunplate create
+						</a>
+						<div class="item">
+							<div class="menu">
+								<a class="item">Subsection 1</a>
+								<a class="active item">Subsection 1</a>
+								<a class="item">Subsection 1</a>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<a class="header" href="#">
+							<i class="cube icon"></i>
+							sunplate run
+						</a>
+					</div>
+					<div class="item">
+						<a class="header" href="#">
+							<i class="cube icon"></i>
+							sunplate generate handlers
+						</a>
+					</div>
+				</nav>
+			</div>
+			<div class="eleven wide column">
+				{% include content.html %}
+			</div>
+		</div>
+
+		{% include forkme.html %}
+	</body>
+</html>
