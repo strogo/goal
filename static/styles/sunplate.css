@@ -1,0 +1,19 @@
+#forkme {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+	z-index: 40000;
+}
+.masthead.segment {
+	min-height: 22em;
+}
+.masthead h1.ui.header {
+	margin-top: 1.2em;
+	font-size: 3.2em;
+	font-weight: normal;
+}
+.masthead h2 {
+	font-size: 1.4em;
+	font-weight: normal;
+}

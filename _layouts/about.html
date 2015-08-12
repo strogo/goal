@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include head.html %}
+	</head>
+
+	<body>
+		<header class="ui inverted vertical masthead center aligned segment">
+			<div class="ui text container">
+				<h1 class="ui header">
+					<a href="/index.html" class="ui orange header">{{ site.title }}</a>
+				</h1>
+			</div>
+			{% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
+		</header>
+
+		<nav class="ui bottom attached stackable orange three item inverted menu">
+			<a class="active item" href="{{ site.url }}">
+				<i class="cubes icon"></i>
+				About
+			</a>
+			<a class="item">
+				<i class="book icon"></i>
+				Tutorial
+			</a>
+			<a class="item">
+				<i class="bug icon"></i>
+				Issue Tracker
+			</a>
+		</nav>
+
+
+		<div class="ui relaxed grid container">
+			<article class="sixteen wide column">
+				{{ content }}
+			</article>
+
+			<footer class="sixteen wide column">
+				BSD 2-clause "Simplified" License
+			</footer>
+		</div>
+
+		<a href="https://github.com/anonx/sunplate">
+			<img src="static/images/forkme_right_orange.png" id="forkme" alt="Fork me on GitHub">
+		</a>
+	</body>
+</html>
