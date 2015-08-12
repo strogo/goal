@@ -1,0 +1,14 @@
+<nav class="ui bottom attached stackable orange three item inverted menu" id="menu">
+	<a class="{% if page.layout == "about" %}active {% endif %}item" href="{{ site.baseurl }}/">
+		<i class="sun icon"></i>
+		About
+	</a>
+	<a class="{% if page.layout == "manual" %}active {% endif %}item" href="{{ site.baseurl }}/manual">
+		<i class="book icon"></i>
+		Manual
+	</a>
+	<a class="item" href="https://github.com/anonx/sunplate/issues">
+		<i class="bug icon"></i>
+		Issue Tracker
+	</a>
+</nav>

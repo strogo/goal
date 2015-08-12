@@ -1,0 +1,10 @@
+<header class="ui inverted vertical masthead center aligned segment" id="{{ page.layout }}_layout">
+	<div class="ui text container">
+		<h1 class="ui header">
+			<a href="{{ site.baseurl }}" class="ui orange header">
+				{{ site.title }}
+			</a>
+		</h1>
+	</div>
+	{% if page.title and page.layout == "about" %}<h2>{{ page.title }}</h2>{% endif %}
+</header>
