@@ -38,5 +38,15 @@
 		</div>
 
 		{% include forkme.html %}
+
+		<script src="{{ site.baseurl }}/static/scripts/anchor.min.js"></script>
+		<script>
+			anchors.add("#content h1");
+			anchors.add("#content h2");
+			anchors.add("#content h3");
+			anchors.add("#content h4");
+			anchors.add("#content h5");
+			anchors.add("#content h6");
+		</script>
 	</body>
 </html>
