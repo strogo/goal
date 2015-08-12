@@ -1,22 +1,41 @@
 title: Sunplate Toolkit
 baseurl: https://anonx.github.io/sunplate
 
+menu:
+  about:
+    name: About
+    url:
+    icon: sun
+  manual:
+    name: Manual
+    url: manual/
+    icon: book
+  tracker:
+    name: Issue Tracker
+    uri: https://github.com/anonx/sunplate/issues
+    icon: bug
+
 manual:
   -
-    name: manual
+    name: Introduction
     url: manual/index.html
-    icon: text page
+    icon: file text
+    category: manual
   -
     name: sunplate create
     url: manual/create/index.html
     icon: cube
+    category: create
   -
     name: sunplate run
     url: manual/run/index.html
     icon: cube
+    category: run
   -
     name: sunplate generate handlers
     url: manual/handlers/index.html
+    icon: cube
+    category: handlers
     pages:
       -
         name: Controllers
@@ -27,7 +46,7 @@ manual:
   -
     name: Deployment
     url: manual/deployment.html
-    icon: text page
+    icon: file text
 
 safe: true
 lsi: false
