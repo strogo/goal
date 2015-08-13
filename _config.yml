@@ -22,8 +22,8 @@ manual:
     icon: file text
     category: manual
   -
-    name: sunplate create
-    url: /manual/create/index.html
+    name: sunplate new
+    url: /manual/new/index.html
     icon: cube
     category: create
   -

@@ -7,7 +7,7 @@ All of them form a full stack MVC (Model - View - [Controller](handlers/controll
 
 The list of currently available utilities includes:
 
-* `sunplate new` creates a new skeleton application with opinionated [structure](create/index.html#layout) and parameters.
+* `sunplate new` creates a new skeleton application with opinionated [structure](new/index.html#layout) and parameters.
 This is a command for easy and fast start of a new project.
 * `sunplate run` runs a file watcher / task runner that is responsible for (re)compilation / (re)start  of your project and,
 if neccessary, (re)build of client-side assets. [Configuration file](run/index.html#sunplate.yml) is used to describe how
@@ -30,8 +30,8 @@ After you have the Toolkit installed, create a new project.
 sunplate new path/to/your/project
 ```
 
-**Please, note that both Sunplate toolkit and your project must be
-located withing [`$GOPATH`](https://golang.org/cmd/go/#hdr-GOPATH_environment_variable) directory.**
+**Please, note that both Sunplate toolkit and your project (during development) must be
+located within [`$GOPATH/src`](https://golang.org/cmd/go/#hdr-GOPATH_environment_variable) directory.**
 
 
 To start the project you have just created use:
