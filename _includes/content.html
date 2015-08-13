@@ -6,6 +6,31 @@
 		{{ content }}
 	</article>
 
+	{% if page.links %}
+		<nav class="sixteen wide centered column">
+			<h1 class="ui dividing header">
+				<small class="content">Read also...</small>
+			</h1>
+			<div class="center aligned content">
+				{% if page.links.prev %}
+					<a class="fluid ui black labeled icon button" href="{{ site.baseurl }}{{ page.links.prev.url }}">
+						<i class="left arrow icon"></i>
+						{{ page.links.prev.name }}
+					</a>
+				{% endif %}
+				{% if page.links.prev and page.links.next %}
+					<div class="ui horizontal divider">Or</div>
+				{% endif %}
+				{% if page.links.next %}
+					<a class="fluid ui orange right labeled icon button" href="{{ site.baseurl }}{{ page.links.next.url }}">
+						<i class="right arrow icon"></i>
+						{{ page.links.next.name }}
+					</a>
+				{% endif %}
+			</div>
+		</nav>
+	{% endif %}
+
 	<footer class="sixteen wide column">
 		BSD 2-clause "Simplified" License
 	</footer>

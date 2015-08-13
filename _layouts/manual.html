@@ -15,18 +15,18 @@
 					{% for item in site.manual %}
 					<div class="{% if page.url == item.url or (page.category == item.category and page.category) %}active {% endif %}item">
 							<a class="header" href="{{ site.baseurl }}{{ item.url }}">
-								<i class="{{ item.icon }} icon"></i>
+								<i class="orange {{ item.icon }} icon"></i>
 								{{ item.name }}
 							</a>
 							{% if item.pages %}
-								<div class="item"><div class="menu">
+								<div class="menu">
 									{% for sub in item.pages %}
 									<a class="{% if page.url == sub.url %}active {% endif %}item" href="{{ site.baseurl }}{% if sub.local %}{{ item.url }}#{{ sub.name | slugify }}{% else %}{{ sub.url }}{% endif %}">
-										<i class="{% if sub.icon %}{{ sub.icon }}{% else %}{% if sub.local == true %}notched circle{% else %}asterisk{% endif %}{% endif %} icon"></i>
+										<i class="orange {% if sub.icon %}{{ sub.icon }}{% else %}{% if sub.local == true %}notched circle{% else %}asterisk{% endif %}{% endif %} icon"></i>
 											{{ sub.name }}
 										</a>
 									{% endfor %}
-								</div></div>
+								</div>
 							{% endif %}
 						</div>
 					{% endfor %}
