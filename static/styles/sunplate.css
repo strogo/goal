@@ -5,6 +5,10 @@
 	border: 0;
 	z-index: 40000;
 }
+strong {
+	color: #f2711c;
+	font-style: italic;
+}
 h1 {
 	font-size: 1.8em !important;
 }
