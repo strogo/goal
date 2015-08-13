@@ -1,6 +1,5 @@
 ---
 layout: manual
-Title: Controllers
+title: Controllers
 category: handlers
 ---
-# Controllers

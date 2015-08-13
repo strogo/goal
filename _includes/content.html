@@ -1,5 +1,8 @@
 <div class="ui relaxed grid container">
 	<article class="sixteen wide column" id="content">
+		{% if page.customHeader != true %}
+			<h1 id="{{ page.title | slugify }}">{{ page.title }}</h1>
+		{% endif %}
 		{{ content }}
 	</article>
 
