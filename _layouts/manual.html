@@ -21,8 +21,8 @@
 							{% if item.pages %}
 								<div class="item"><div class="menu">
 									{% for sub in item.pages %}
-									<a class="{% if page.url == sub.url %}active {% endif %}item" href="{{ site.baseurl }}{{ sub.url }}">
-										<i class="{% if sub.icon %}{{ sub.icon }}{% else %}asterisk{% endif %} icon"></i>
+									<a class="{% if page.url == sub.url %}active {% endif %}item" href="{{ site.baseurl }}{% if sub.local %}{{ item.url }}#{{ sub.name | slugify }}{% else %}{{ sub.url }}{% endif %}">
+										<i class="{% if sub.icon %}{{ sub.icon }}{% else %}{% if sub.local == true %}notched circle{% else %}asterisk{% endif %}{% endif %} icon"></i>
 											{{ sub.name }}
 										</a>
 									{% endfor %}

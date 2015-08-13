@@ -21,16 +21,28 @@ manual:
     url: /manual/index.html
     icon: file text
     category: manual
+    pages:
+      -
+        name: Getting Started
+        local: true
   -
     name: sunplate new
     url: /manual/new/index.html
     icon: cube
     category: create
+    pages:
+      -
+        name: Default Layout
+        local: true
   -
     name: sunplate run
     url: /manual/run/index.html
     icon: cube
     category: run
+    pages:
+      -
+        name: Configuration file
+        local: true
   -
     name: sunplate generate handlers
     url: /manual/handlers/index.html

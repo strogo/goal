@@ -7,7 +7,7 @@ All of them form a full stack MVC (Model - View - [Controller](handlers/controll
 
 The list of currently available utilities includes:
 
-* `sunplate new` creates a new skeleton application with opinionated [structure](new/index.html#layout) and parameters.
+* `sunplate new` creates a new skeleton application with opinionated [structure](new/index.html#default-layout) and parameters.
 This is a command for easy and fast start of a new project.
 * `sunplate run` runs a file watcher / task runner that is responsible for (re)compilation / (re)start  of your project and,
 if neccessary, (re)build of client-side assets. [Configuration file](run/index.html#sunplate.yml) is used to describe how
