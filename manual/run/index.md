@@ -54,8 +54,10 @@ init:
   - rm -rf ./tmp
 ```
 
-**As a note, use of commands specific for some platform (such as `rm -rf` above) is discouraged.
-It is always better to use cross platform equivalents, if possible.**
+**All commands will be started from the root of your project.**
+
+As a note, use of commands specific for some platform (such as `rm -rf` above) is discouraged.
+It is always better to use cross platform equivalents, if possible.
 
 ### Variables
 Commands may also include variables. The list of currently supported ones includes:
@@ -72,15 +74,16 @@ init:
 This will produce "./bin/app.exe" binary when on Windows and "./bin/app" otherwise.
 
 ### Builtin commands
-Apart from the commands described above, there is a list of `sunplate run` builtin commands, they are:
+Apart from the kinds of commands described above, there is a list of `sunplate run` builtin commands, they are:
 
 * `/start` - start some commands asynchronously
 * `/run` - start some commands and wait them to complete
-* `/single` - start a single instance of some command asynchronously, make sure the previous one is killed
+* `/single` - start a new instance of some command asynchronously, make sure the old one is killed
 * `/echo` - print something
 * `/pass` - do nothing
 
-They can only be used inside `init` and `watch` sections as follows:
+They can only be used inside `init` and `watch` sections.
+There is a demonstration of builtin commands in action:
 
 ```yaml
 init:
@@ -103,7 +106,7 @@ A full working example of `sunplate.yml` configuration file is provided below:
 
 ```yaml
 init:
-  - npm install coffeescript # Install coffeescript.
+  - npm install coffeescript # Install CoffeeScript.
   - /run buildApp            # Build application for the first time.
   - /single startApp         # Run a single instance of app.
 watch:
