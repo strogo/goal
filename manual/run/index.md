@@ -18,4 +18,4 @@ This can be useful for:
 * Compilation of SCSS, LESS, CoffeeScript, concatenation and compression of JS, CSS, etc.
 
 **Just as any other utility of Sunplate toolkit, `sunplate run` is not tied to other components.
-It is indepent and you can use it separately from the toolkit.**
+It is independent and you can use it separately from the toolkit.**
