@@ -66,7 +66,7 @@ This may be useful when building your application:
 
 ```yaml
 init:
-	go build -o ./bin/app:EXT ./main.go
+  - go build -o ./bin/app:EXT ./main.go
 ```
 
 This will produce "./bin/app.exe" binary when on Windows and "./bin/app" otherwise.
