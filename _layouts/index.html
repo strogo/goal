@@ -1,15 +1,13 @@
 ---
 layout: about
-title: High productivity web-development in Go language
 customHeader: true
 ---
-
 <div class="ui stackable two column grid">
 
 	<div class="ten wide column">
-		<h1>
+		<h1 class="ui header">
 			Meet Sunplate
-			<small class="ui text container">Free and Open-Source Toolkit</small>
+			<div class="ui sub header">Free and Open-Source Toolkit</div>
 		</h1>
 		<div class="ui two doubling cards">
 			<div class="card">
@@ -96,22 +94,7 @@ customHeader: true
 	</div>
 
 	<section class="six wide column">
-		<h1 class="ui header">
-			Getting started
-		</h1>
-{% highlight bash %}
-# Step 1: Install sunplate toolkit.
-go get -u github.com/anonx/sunplate
-
-# Step 2: Create a new skeleton application.
-sunplate new github.com/$username/$project
-
-# Step 3: Start a watcher / task runner.
-sunplate run github.com/$username/$project
-
-# Step 4: Start making changes to the app
-# generated at Step 1.
-{% endhighlight %}
+		{{ content }}
 	</section>
 
 </div>
