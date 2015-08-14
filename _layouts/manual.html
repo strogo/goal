@@ -13,8 +13,8 @@
 			<div class="five wide column">
 				<nav class="ui inverted fluid pointing vertical menu">
 					{% for item in site.manual %}
-					<div class="{% if page.url == item.url or (page.category == item.category and page.category) %}active {% endif %}item">
-							<a class="header" href="{{ site.baseurl }}{{ item.url }}">
+					<div class="{% if page.url == item.url or (page.category == item.category and page.category) %}active {% endif %}fluid item">
+							<a class="block header" href="{{ site.baseurl }}{{ item.url }}">
 								<i class="orange {{ item.icon }} icon"></i>
 								{{ item.name }}
 							</a>

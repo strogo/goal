@@ -42,7 +42,7 @@ manual:
     pages:
       -
         name: Configuration file
-        url: /manual/run/config.html
+        local: true
   -
     name: sunplate generate handlers
     url: /manual/handlers/index.html

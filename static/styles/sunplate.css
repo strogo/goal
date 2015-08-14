@@ -48,3 +48,6 @@ h6 {
 #menu {
 	margin-bottom: 2em;
 }
+.block.header {
+	display: block;
+}
