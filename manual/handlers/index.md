@@ -2,6 +2,10 @@
 layout: manual
 title: Command "sunplate generate handlers"
 customHeader: true
+links:
+  next:
+    name: Everything about controllers
+    url: controllers.html
 ---
 # Command `sunplate generate handlers`
 This is the command that scans your [controllers](controllers.html) package and generates
