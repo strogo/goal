@@ -34,7 +34,7 @@ Moreover, they may get any number of arguments of the following types:
 * `[]uint`, `[]uint8`, `[]uint16`, `[]uint32`, `[]uint64`
 * `[]float32`, `[]float64`
 
-The arguments will be extracted from the following sources (in that order):
+The arguments will be initialized with the values extracted from the following sources (in that order):
 
 * The URL `/:path` parameters
 * The URL `?query` parameters
