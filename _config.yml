@@ -29,7 +29,7 @@ manual:
     name: sunplate new
     url: /manual/new/index.html
     icon: cube
-    category: create
+    category: new
     pages:
       -
         name: Default Layout
@@ -55,6 +55,18 @@ manual:
       -
         name: Actions
         url: /manual/handlers/actions.html
+  -
+    name: Standard controllers
+    url: /manual/controllers.html
+    icon: file text
+    category: controllers
+    pages:
+      -
+        name: Template
+        local: true
+      -
+        name: Params
+        local: true
   -
     name: Deployment
     url: /manual/deployment.html
