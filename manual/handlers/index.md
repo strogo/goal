@@ -5,7 +5,7 @@ customHeader: true
 links:
   next:
     name: Everything about controllers
-    url: /manual/controllers.html
+    url: /manual/handlers/controllers.html
 ---
 # Command `sunplate generate handlers`
 This is the command that scans your [controllers](controllers.html) package and generates
