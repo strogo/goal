@@ -7,20 +7,20 @@ links:
     name: Everything about controllers
     url: /manual/handlers/controllers.html
 ---
-Action is a [controller](controllers.html)'s exported method that returns a type implementing
-`action.Result` (of `github.com/anonx/sunplate/action`) as its first result.
+Action is a [controller](controllers.html)'s exported method that returns an
+`http.Handler` (of `net/http`) as its first result.
 
 ```go
-import "github.com/anonx/sunplate/action"
+import "net/http"
 
 // Index is a sample actions of Profiles controller.
-func (c *Profiles) Index() action.Result {
+func (c *Profiles) Index() http.Handler {
 	...
 }
 ```
 
 Actions are allowed to return any number of arguments. The only requirement is the first
-one must always be `action.Result`.
+one must always be `http.Handler`.
 Moreover, they may get any number of arguments of the following types:
 
 * `bool`
@@ -43,7 +43,7 @@ The arguments will be initialized with the values extracted from the following s
 ```go
 // History is a sample of action that gets two arguments
 // and may return an error as a second result.
-func (c *Profiles) History(username string, page int) (action.Result, error) {
+func (c *Profiles) History(username string, page int) (http.Handler, error) {
 	...
 }
 ```
@@ -59,7 +59,7 @@ about it in the description of [request life cycle](controllers.html#request-lif
 ```go
 // Before is a magic method that is automatically started before
 // any other action of Profiles controller.
-func (c *Profiles) Before() action.Result {
+func (c *Profiles) Before() http.Handler {
 	if c.NotAuthorize() {
 		// Login form will be rendered.
 		return c.RenderTemplate("profiles/login.html")

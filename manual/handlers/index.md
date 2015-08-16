@@ -20,7 +20,7 @@ type Application struct {
 }
 
 // Index is an action.
-func (c *Application) Index() action.Result {
+func (c *Application) Index() http.Handler {
 	...
 }
 ```

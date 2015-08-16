@@ -19,7 +19,7 @@ type Profiles struct {
 }
 
 // Index is a sample action.
-func (c *Profiles) Index() action.Result {
+func (c *Profiles) Index() http.Handler {
 	...
 }
 ```
