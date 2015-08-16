@@ -7,9 +7,9 @@ Standard controllers are the controllers that are included in your
 [automatically generated](new) app by-default. Though, you can simply remove / replace
 any of them from your app if your like.
 
-## Template
-Template is template system that is based on Go's standard `html/template` package.
-It is however has a difference:
+## Templates
+Templates controller brings brings to your app a template system that is based on Go's standard `html/template` package.
+It however has a difference:
 
 * Every template must either have `base` block inside or have `Base.html` file with `base` block
 in the same directory, or in one of the upper directories.
@@ -50,6 +50,6 @@ Template controller will bring the following methods to your actions:
 
 * `RenderTemplate("Path/To/File.html")`
 
-## Params
-Params controller parses request and makes it available as `Request` field in your controller.
+## Requests
+Requests controller parses request and makes it available as `Request` field in your controller.
 That let you access parameters as `c.Request.FormValue("somekey")`.
