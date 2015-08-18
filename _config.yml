@@ -62,10 +62,10 @@ manual:
     category: controllers
     pages:
       -
-        name: Template
+        name: Templates
         local: true
       -
-        name: Params
+        name: Requests
         local: true
   -
     name: Deployment
