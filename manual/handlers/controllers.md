@@ -115,3 +115,4 @@ Here is an overview of life cycle of a request to the handler function generated
   * ...
   * of parent controller #N (if `true` is returned **exit**)
   * of current controller (if true is returned **exit**)
+* Call of handler.ServeHTTP (if a `non-nil` result was returned by actions above)
