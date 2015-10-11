@@ -2,13 +2,13 @@
 layout: manual
 title: Deployment
 ---
-> Sunplate does not bring connection / resource management by-default and thus
+> Goal does not bring connection / resource management by-default and thus
 > all production deployments should have an HTTP proxy that is properly configured
-> in front of all Sunplate HTTP requests.
+> in front of all Goal HTTP requests.
 
 
 
-An app that is developed using Sunplate Toolkit does not require any
+An app that is developed using Goal Toolkit does not require any
 extra dependencies to be built.
 It is a regular Go language project.
 And thus, if your are using a version control system to distribute updates,

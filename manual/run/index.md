@@ -1,9 +1,9 @@
 ---
 layout: manual
-title: Command "sunplate run"
+title: Command "goal run"
 customHeader: true
 ---
-# Command `sunplate run`
+# Command `goal run`
 This command starts a file watcher / task runner.
 It waits for changes of files in specified directories and executes specified commands
 when the changes occur.
@@ -13,18 +13,18 @@ This can be useful for:
 * (Re)compilation and (re)start of your Go application and its dependencies.
 * Compilation of SCSS, LESS, CoffeeScript, concatenation and compression of JS, CSS, etc.
 
-**Just as any other utility of Sunplate toolkit, `sunplate run` is not tied to other components.
+**Just as any other utility of Goal toolkit, `goal run` is not tied to other components.
 It is independent and you can use it separately from the toolkit.**
 
 ## Configuration file
 ### Sections
-To specify directories to watch and commands to execute `sunplate.yml`
+To specify directories to watch and commands to execute `goal.yml`
 file at the root of your project is used.
 It has the following format:
 
 ```yaml
 # This section has commands that will be executed at the start of
-# `sunplate run` and every time this configuration file is modified.
+# `goal run` and every time this configuration file is modified.
 init: [...]
 
 # This section defines the directories to watch and commands
@@ -36,8 +36,8 @@ watch:
 
 As you can see there two main sections. They are:
 
-* `init` contains commands that are executed once per start of `sunplate run` command.
-Moreover, they are started again when your `sunplate.yml` file is changed and its reload is required.
+* `init` contains commands that are executed once per start of `goal run` command.
+Moreover, they are started again when your `goal.yml` file is changed and its reload is required.
 * `watch` specifies directories and their lists of commands. Just as you can may expect,
 the commands will be executed when some files in those directories are updated.
 
@@ -74,7 +74,7 @@ init:
 This will produce "./bin/app.exe" binary when on Windows and "./bin/app" otherwise.
 
 ### Builtin commands
-Apart from the kinds of commands described above, there is a list of `sunplate run` builtin commands, they are:
+Apart from the kinds of commands described above, there is a list of `goal run` builtin commands, they are:
 
 * `/start` - start some commands asynchronously
 * `/run` - start some commands and wait them to complete
@@ -102,7 +102,7 @@ one_command:
 ```
 
 ### Example
-A full working example of `sunplate.yml` configuration file is provided below:
+A full working example of `goal.yml` configuration file is provided below:
 
 ```yaml
 init:

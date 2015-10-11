@@ -1,13 +1,13 @@
 ---
 layout: manual
-title: Command "sunplate generate handlers"
+title: Command "goal generate handlers"
 customHeader: true
 links:
   next:
     name: Everything about controllers
     url: /manual/handlers/controllers.html
 ---
-# Command `sunplate generate handlers`
+# Command `goal generate handlers`
 This is the command that scans your [controllers](controllers.html) package and generates
 a package with handler functions where there is a handler function per every
 [action](actions.html) of your controllers.

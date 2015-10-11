@@ -1,5 +1,5 @@
-title: Sunplate Toolkit
-baseurl: https://sunplate.club
+title: Goal Toolkit
+baseurl: https://goal.club
 
 menu:
   about:
@@ -12,7 +12,7 @@ menu:
     icon: book
   tracker:
     name: Issue Tracker
-    uri: https://github.com/anonx/sunplate/issues
+    uri: https://github.com/anonx/goal/issues
     icon: bug
 
 manual:
@@ -26,7 +26,7 @@ manual:
         name: Getting Started
         local: true
   -
-    name: sunplate new
+    name: goal new
     url: /manual/new/index.html
     icon: cube
     category: new
@@ -35,7 +35,7 @@ manual:
         name: Default Layout
         local: true
   -
-    name: sunplate run
+    name: goal run
     url: /manual/run/index.html
     icon: cube
     category: run
@@ -44,7 +44,7 @@ manual:
         name: Configuration file
         local: true
   -
-    name: sunplate generate handlers
+    name: goal generate handlers
     url: /manual/handlers/index.html
     icon: cube
     category: handlers
