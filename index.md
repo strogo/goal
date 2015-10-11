@@ -6,7 +6,7 @@ title: High productivity web-development in Go language
 
 ```bash
 # Step 1: Install Goal toolkit.
-go get -u github.com/anonx/goal
+go get -u github.com/colegion/goal
 
 # Step 2: Create a new skeleton application.
 goal new github.com/$username/$project

@@ -20,7 +20,7 @@ title: Introduction to Goal
 To get started with Goal, first install it:
 
 ```bash
-go get -u github.com/anonx/goal
+go get -u github.com/colegion/goal
 ```
 
 After you have the Toolkit installed, create a new project.

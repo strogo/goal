@@ -123,6 +123,6 @@ watch:
     - /pass # Do nothing as we haven't decided yet what to do here.
 buildApp:
   # Commands for building the project.
-  - go build -o ./bin/run:EXT github.com/anonx/sample
+  - go build -o ./bin/run:EXT github.com/colegion/sample
 startApp: ./bin/run:EXT # A command for start of the app.
 ```

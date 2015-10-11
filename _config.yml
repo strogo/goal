@@ -12,7 +12,7 @@ menu:
     icon: book
   tracker:
     name: Issue Tracker
-    uri: https://github.com/anonx/goal/issues
+    uri: https://github.com/colegion/goal/issues
     icon: bug
 
 manual:

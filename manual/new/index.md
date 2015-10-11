@@ -10,14 +10,14 @@ with [opinionated structure](#default-layout) and parameters and saves it to the
 Example of its use is:
 
 ```bash
-goal new github.com/anonx/sample
+goal new github.com/colegion/sample
 ```
 
-This will make a `sample/` directory inside `$GOPATH/src/github.com/anonx` and create all neccessary files.
+This will make a `sample/` directory inside `$GOPATH/src/github.com/colegion` and create all neccessary files.
 Alternatively, you can use relative path:
 
 ```bash
-goal new ./anonx/sample
+goal new ./colegion/sample
 ```
 
 **Please, note that during development your project must be
