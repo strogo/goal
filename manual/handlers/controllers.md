@@ -28,7 +28,7 @@ As part of handling HTTP request, an instance of controller will be instantiated
 Herewith no instance of controller is shared between requests.
 
 ## Inheritance
-The way to inherit from some controller is to embed it anonymously as follows:
+The way to inherit from some controller is to embed it anonymously. E.g.:
 
 ```go
 type ParentController struct {
@@ -43,11 +43,12 @@ type ChildController struct {
 }
 ```
 
-**Pay attention, it is required to be embedded as  `*ParentController` rather than `ParentController`.**
+Read more about [embedding](https://golang.org/doc/effective_go.html#embedding) in Go language docs.
 
 It is possible to embed any number of parent controllers.
-Child controller will inherit [magic methods](#magic-methods) and
-[magic actions](actions.html#magic-actions) of its parent controllers.
+**The limitation of Goal is**: child controller will inherit [magic methods](#magic-methods) and
+[magic actions](actions.html#magic-actions) of its parent controllers only
+if they are in a form of `*ParentController` rather than `ParentController`.
 
 ## Magic methods
 Magic methods (if presented) are executed automatically with every request.
