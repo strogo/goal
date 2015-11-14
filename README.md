@@ -5,11 +5,20 @@ The [Jekyll](https://jekyllrb.com) powered site is located at [colegion.github.i
 To compile and view the site locally do the following:
 
 ```bash
+# Install the Jekyll and all dependencies.
 gem install jekyll redkarpet pygments
-git clone -b gh-pages git@github.com:colegion/goal.git
-cd goal/
+
+# Clone the "gh-pages" branch and locate it inside "docs/" dir.
+git clone -b gh-pages git@github.com:colegion/goal.git docs
+
+# Move to the newly create directory.
+cd docs/
+
+# Start the server with docs.
 jekyll serve --baseurl ""
 ```
+
+The docs will be available on [localhost:4000](http://localhost:4000).
 
 ### License
 Distributed under the BSD 2-clause "Simplified" License unless otherwise noted.
