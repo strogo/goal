@@ -124,5 +124,6 @@ watch:
 buildApp:
   # Commands for building the project.
   - go build -o ./bin/run:EXT github.com/colegion/sample
-startApp: ./bin/run:EXT # A command for start of the app.
+startApp:
+  - ./bin/run:EXT # A command for start of the app.
 ```
