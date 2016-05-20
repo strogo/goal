@@ -55,6 +55,9 @@ manual:
       -
         name: Actions
         url: /manual/handlers/actions.html
+      -
+        name: Routes
+        url: /manual/handlers/routes.html
   -
     name: Standard controllers
     url: /manual/controllers.html
